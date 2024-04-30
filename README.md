@@ -41,7 +41,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif](https://github.com/COP4808-Spring2024-Full-Stack-Webdev/final-project-lylyramos/blob/main/FINALDEMO.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/lylyramos/FinalProjectWEB102/blob/main/FINALDEMO.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 GIF created with ...  
