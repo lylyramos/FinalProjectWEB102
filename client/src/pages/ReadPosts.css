@@ -5,3 +5,31 @@
     gap: 30px;
 }
 
+.sortContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sortLabel {
+    margin-right: 10px;
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sortSelect {
+    padding: 10px;
+    border: 1px solid #4CAF50; 
+    border-radius: 5px;
+    background-color: white;
+    color: #4CAF50; 
+    font-size: 16px;
+}

@@ -6,23 +6,34 @@ import { supabase } from '../client'
 const ReadPosts = (props) => {
 
     const [posts, setPosts] = useState([]);
+    const [sortBy, setSortBy] = useState('created_at');
 
     useEffect(() => {
         const fetchPost = async () => {
-            const { data } = await supabase
+            let { data } = await supabase
                 .from('Final')
                 .select()
-                .order('created_at', { ascending: true });
+                .order('sortBy', { ascending: true });
 
             setPosts(data);
         }
 
         fetchPost();
-    }, []);
-    
+    }, [sortBy]);
+
+    const handleSortChange = (event) => {
+        setSortBy(event.target.value);
+    }; 
     
     return (
         <div className="ReadPosts">
+            <div className="sortContainer">
+                <label className="sortLabel">Sort by:</label>
+                <select className="sortSelect" value={sortBy} onChange={handleSortChange}>
+                    <option value="created_at">Creation Date</option>
+                    <option value="betCount">Favorite Votes</option>
+                </select>
+            </div>
             {
                 posts && posts.length > 0 ?
                 posts.map((post,index) => 
