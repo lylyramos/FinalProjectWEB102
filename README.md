@@ -1,4 +1,4 @@
-# Web Development Final Project - *World Culinary*
+# Web Development Final Project - *World Cuisine*
 
 Submitted by: **Liliana Ramos**
 
@@ -49,7 +49,7 @@ GIF created with ...
 
 
 ## Notes
-
+Deployed Website Link: https://vocal-fenglisu-4365cd.netlify.app/
 
 
 ## License
