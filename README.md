@@ -1,4 +1,4 @@
-# Web Development Final Project - *World Culinary*
+# Web Development Final Project - *World Cuisine*
 
 Submitted by: **Liliana Ramos**
 
