@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import Card from '../components/Card';
 import { supabase } from '../client';
 import './ReadPosts.css';
-
 const ReadPosts = (props) => {
     const [posts, setPosts] = useState([]);
     const [sortBy, setSortBy] = useState('newest'); // Default sorting by newest
+    const [loading, setLoading] = useState(false); // New state variable for loading
 
     useEffect(() => {
         async function fetchPosts() {
+            setLoading(true); // Set loading to true before fetching posts
             let { data, error } = await supabase
                 .from('Final')
                 .select('*')
@@ -19,10 +20,14 @@ const ReadPosts = (props) => {
             } else {
                 setPosts(data);
             }
+            setLoading(false); // Set loading to false after fetching posts
         }
     
         fetchPosts();
     }, [sortBy]);
+    if (loading) {
+        return <div>Loading...</div>; // Replace this with your loading animation
+    }
 
     const handleSortChange = (event) => {
         setSortBy(event.target.value);
