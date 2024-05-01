@@ -18,16 +18,21 @@ const Comments = ({ postId }) => {
     };
 
     return (
-        <div>
-            <h3>Comments</h3>
-            <form onSubmit={handleSubmit}>
-                <textarea value={comment} onChange={handleChange} placeholder="Add a comment..." />
+        <div className="comment-section">
+            <h3 className="comment-title">Comments</h3>
+            <form onSubmit={handleSubmit} className="comment-form">
+                <textarea 
+                    value={comment} 
+                    onChange={handleChange} 
+                    placeholder="Add a comment..." 
+                    className="comment-input"
+                />
                 <br />
-                <button type="submit">Submit</button>
+                <button type="submit" className="submit-button">Submit</button>
             </form>
-            <ul>
+            <ul className="comment-list">
                 {comments.map((c, index) => (
-                    <li key={index}>{c.text}</li>
+                    <li key={index} className="comment-item">{c.text}</li>
                 ))}
             </ul>
         </div>
